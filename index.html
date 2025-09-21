@@ -13,10 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     
-    <!-- HTMX -->
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <!-- Simple JavaScript for interactions -->
 </head>
 <body>
     <main class="hero-page">
@@ -32,47 +29,22 @@
                 </div>
                 
                 <div class="action-buttons">
-                    <button class="action-button primary" 
-                            onclick="showContent('buy')"
-                            x-data="{ loading: false }"
-                            @click="loading = true"
-                            :disabled="loading">
-                        <span x-show="!loading">Buy</span>
-                        <span x-show="loading">Loading...</span>
+                    <button class="action-button primary" onclick="showContent('buy')">
+                        Buy
                     </button>
-                    <button class="action-button" 
-                            onclick="showContent('sell')"
-                            x-data="{ loading: false }"
-                            @click="loading = true"
-                            :disabled="loading">
-                        <span x-show="!loading">Sell</span>
-                        <span x-show="loading">Loading...</span>
+                    <button class="action-button" onclick="showContent('sell')">
+                        Sell
                     </button>
-                    <button class="action-button" 
-                            onclick="showContent('rent')"
-                            x-data="{ loading: false }"
-                            @click="loading = true"
-                            :disabled="loading">
-                        <span x-show="!loading">Rent</span>
-                        <span x-show="loading">Loading...</span>
+                    <button class="action-button" onclick="showContent('rent')">
+                        Rent
                     </button>
-                    <button class="action-button" 
-                            onclick="showContent('value')"
-                            x-data="{ loading: false }"
-                            @click="loading = true"
-                            :disabled="loading">
-                        <span x-show="!loading">Get Current Home Value</span>
-                        <span x-show="loading">Loading...</span>
+                    <button class="action-button" onclick="showContent('value')">
+                        Get Current Home Value
                     </button>
                 </div>
                 
-                <button class="appointment-button" 
-                        onclick="showContent('appointment')"
-                        x-data="{ loading: false }"
-                        @click="loading = true"
-                        :disabled="loading">
-                    <span x-show="!loading">Schedule an Appointment</span>
-                    <span x-show="loading">Loading...</span>
+                <button class="appointment-button" onclick="showContent('appointment')">
+                    Schedule an Appointment
                 </button>
             </div>
         </div>
