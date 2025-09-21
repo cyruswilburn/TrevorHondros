@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Hondros - Real Estate Expert</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="site-header" x-data="{ mobileMenuOpen: false }">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo">Trevor Hondros</a>
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="mobile-menu-toggle"
+                    :aria-expanded="mobileMenuOpen"
+                >
+                    <span class="sr-only">Menu</span>
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-links" :class="{ 'active': mobileMenuOpen }">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-profile">
+                    <div class="profile-image">
+                        <img src="media/poolsideWBackground.jpeg" alt="Trevor Hondros" class="profile-pic">
+                    </div>
+                </div>
+                <div class="hero-banner">
+                    <h2>Real Estate Expert</h2>
+                </div>
+                <div class="hero-content">
+                    <h1>Trevor Hondros</h1>
+                    <p class="hero-subtitle">Your Trusted Real Estate Professional</p>
+                    <p class="hero-description">
+                        Guiding you through your real estate journey with expertise and dedication.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="cta-button">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
