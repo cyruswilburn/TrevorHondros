@@ -102,10 +102,11 @@ body {
 
 /* Hero Page */
 .hero-page {
-    background-image: url('/media/poolsideWBackground.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('media/poolsideWBackground.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -118,7 +119,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    background: rgba(0, 0, 0, 0.3); /* Lighter overlay since we have gradient on background */
     z-index: 1;
 }
 
