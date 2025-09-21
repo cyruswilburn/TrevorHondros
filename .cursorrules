@@ -1,0 +1,18 @@
+# Cursor Rules — PHP Website (Sand Gold / Black / Gray) + Fast JS (htmx + Alpine + optional Preact)
+
+## Project voice
+- Clean, fast, accessible PHP marketing site with **sand-gold / black / gray** palette.
+- Prefer **.php** with partials; enhance progressively with tiny JS.
+- JS strategy = **buildless + islands**: htmx (partial HTML over the wire), Alpine (small interactive state), optional Preact (only for complex widgets, lazy-loaded).
+
+---
+
+## Tech stack & structure
+- **PHP 8+**, strict includes and whitelisted routes.
+- **CSS:** plain CSS with variables; no heavy frameworks.
+- **JS:** 
+  - **Default:** **htmx** (~14KB) for partial loads + **Alpine.js** (~8KB) for small interactions.
+  - **Optional island:** **Preact** (only when needed, dynamic import).
+  - No jQuery. No global bundles.
+
+**File layout**
