@@ -123,21 +123,28 @@ body {
     z-index: 1;
 }
 
-/* Profile Image */
-.hero-profile {
+/* Profile Banner */
+.hero-profile-banner {
     position: absolute;
     top: 2rem;
     left: 2rem;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid var(--sand-gold);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 3px solid var(--sand-gold);
+    margin-right: 1rem;
 }
 
 .profile-pic {
@@ -146,24 +153,23 @@ body {
     object-fit: cover;
 }
 
-/* Hero Banner */
-.hero-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(var(--sand-gold-rgb), 0.9);
-    padding: 0.75rem 0;
-    text-align: center;
-    z-index: 2;
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-banner h2 {
+.profile-info h1 {
     color: var(--black);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.profile-title {
+    color: var(--sand-gold);
+    font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     margin: 0;
 }
 
@@ -172,12 +178,7 @@ body {
     color: var(--white);
     max-width: 600px;
     padding: 2rem;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    margin-top: 8rem; /* Add space for the profile banner */
 }
 
 .hero-subtitle {
