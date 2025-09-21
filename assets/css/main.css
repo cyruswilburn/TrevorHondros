@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.5;
     color: var(--black);
 }
@@ -157,6 +157,7 @@ body {
 }
 
 .profile-section h1 {
+    font-family: 'Montserrat', sans-serif;
     color: var(--black);
     font-size: 1.75rem;
     font-weight: 700;
@@ -254,6 +255,55 @@ body {
 .appointment-button:focus {
     outline: 2px solid var(--sand-gold);
     outline-offset: 2px;
+}
+
+/* Content Area */
+#content-area {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.content-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+}
+
+.content-section p {
+    color: var(--gray-700);
+    margin-bottom: 1rem;
+}
+
+.content-section ul {
+    color: var(--gray-700);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    background: var(--gray-200);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-weight: 500;
 }
 
 /* Utility Classes */

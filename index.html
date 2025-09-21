@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Hondros - Real Estate Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+</head>
+<body>
+    <main class="hero-page">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-box">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="media/trevorspfpInSuit.jpg" alt="Trevor Hondros" class="profile-pic">
+                </div>
+                <h1>Trevor Hondros</h1>
+                <p class="profile-title">Real Estate Expert</p>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-button primary" 
+                        onclick="showContent('buy')"
+                        x-data="{ loading: false }"
+                        @click="loading = true"
+                        :disabled="loading">
+                    <span x-show="!loading">Buy</span>
+                    <span x-show="loading">Loading...</span>
+                </button>
+                <button class="action-button" 
+                        onclick="showContent('sell')"
+                        x-data="{ loading: false }"
+                        @click="loading = true"
+                        :disabled="loading">
+                    <span x-show="!loading">Sell</span>
+                    <span x-show="loading">Loading...</span>
+                </button>
+                <button class="action-button" 
+                        onclick="showContent('rent')"
+                        x-data="{ loading: false }"
+                        @click="loading = true"
+                        :disabled="loading">
+                    <span x-show="!loading">Rent</span>
+                    <span x-show="loading">Loading...</span>
+                </button>
+                <button class="action-button" 
+                        onclick="showContent('value')"
+                        x-data="{ loading: false }"
+                        @click="loading = true"
+                        :disabled="loading">
+                    <span x-show="!loading">Get Current Home Value</span>
+                    <span x-show="loading">Loading...</span>
+                </button>
+            </div>
+            
+            <button class="appointment-button" 
+                    onclick="showContent('appointment')"
+                    x-data="{ loading: false }"
+                    @click="loading = true"
+                    :disabled="loading">
+                <span x-show="!loading">Schedule an Appointment</span>
+                <span x-show="loading">Loading...</span>
+            </button>
+        </div>
+        
+        <div id="content-area"></div>
+    </main>
+
+    <script>
+        function showContent(type) {
+            const contentArea = document.getElementById('content-area');
+            
+            const content = {
+                buy: `
+                    <div class="content-section">
+                        <h2>Buy a Home</h2>
+                        <p>Let's find your perfect home. Contact Trevor to get started:</p>
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> trevor@example.com</p>
+                        </div>
+                    </div>
+                `,
+                sell: `
+                    <div class="content-section">
+                        <h2>Sell Your Home</h2>
+                        <p>Get the best price for your property. Trevor will help you:</p>
+                        <ul>
+                            <li>Determine your home's market value</li>
+                            <li>Prepare your home for sale</li>
+                            <li>Market your property effectively</li>
+                        </ul>
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> trevor@example.com</p>
+                        </div>
+                    </div>
+                `,
+                rent: `
+                    <div class="content-section">
+                        <h2>Rent a Property</h2>
+                        <p>Find the perfect rental property. Trevor can help you:</p>
+                        <ul>
+                            <li>Find properties that match your needs</li>
+                            <li>Negotiate lease terms</li>
+                            <li>Navigate the rental process</li>
+                        </ul>
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> trevor@example.com</p>
+                        </div>
+                    </div>
+                `,
+                value: `
+                    <div class="content-section">
+                        <h2>Get Your Home's Value</h2>
+                        <p>Discover what your home is worth in today's market:</p>
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> trevor@example.com</p>
+                        </div>
+                    </div>
+                `,
+                appointment: `
+                    <div class="content-section">
+                        <h2>Schedule an Appointment</h2>
+                        <p>Book a consultation with Trevor:</p>
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> trevor@example.com</p>
+                        </div>
+                    </div>
+                `
+            };
+            
+            contentArea.innerHTML = content[type] || '';
+        }
+    </script>
+</body>
+</html>
