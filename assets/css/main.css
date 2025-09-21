@@ -122,16 +122,26 @@ body {
     z-index: 1;
 }
 
-.hero-content-box {
-    position: relative;
+.hero-banner {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
     z-index: 2;
     background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
     border-radius: 1rem;
-    margin-left: 2rem;
-    max-width: 400px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
+    max-width: 400px;
+    width: 100%;
+}
+
+.banner-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* Profile Section */
@@ -260,8 +270,9 @@ body {
 /* Content Area */
 #content-area {
     position: absolute;
-    top: 2rem;
+    top: 50%;
     right: 2rem;
+    transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 1rem;
