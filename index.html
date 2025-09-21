@@ -12,41 +12,37 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    
-    <!-- Simple JavaScript for interactions -->
 </head>
 <body>
     <main class="hero-page">
         <div class="hero-overlay"></div>
-        <div class="hero-banner">
-            <div class="banner-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="media/trevorspfpInSuit.jpg" alt="Trevor Hondros" class="profile-pic">
-                    </div>
-                    <h1>Trevor Hondros</h1>
-                    <p class="profile-title">Real Estate Expert</p>
+        <div class="content-banner">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="media/trevorspfpInSuit.jpg" alt="Trevor Hondros" class="profile-pic">
                 </div>
-                
-                <div class="action-buttons">
-                    <button class="action-button primary" onclick="showContent('buy')">
-                        Buy
-                    </button>
-                    <button class="action-button" onclick="showContent('sell')">
-                        Sell
-                    </button>
-                    <button class="action-button" onclick="showContent('rent')">
-                        Rent
-                    </button>
-                    <button class="action-button" onclick="showContent('value')">
-                        Get Current Home Value
-                    </button>
-                </div>
-                
-                <button class="appointment-button" onclick="showContent('appointment')">
-                    Schedule an Appointment
+                <h1>Trevor Hondros</h1>
+                <p class="profile-title">Real Estate Expert</p>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-button primary" onclick="showContent('buy')">
+                    Buy
+                </button>
+                <button class="action-button" onclick="showContent('sell')">
+                    Sell
+                </button>
+                <button class="action-button" onclick="showContent('rent')">
+                    Rent
+                </button>
+                <button class="action-button" onclick="showContent('value')">
+                    Get Current Home Value
                 </button>
             </div>
+            
+            <button class="appointment-button" onclick="showContent('appointment')">
+                Schedule an Appointment
+            </button>
         </div>
         
         <div id="content-area"></div>
