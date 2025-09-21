@@ -21,6 +21,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.5;
@@ -103,16 +111,18 @@ body {
 /* Hero Page */
 .hero-page {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('media/poolsideWBackground.jpeg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-overlay {
